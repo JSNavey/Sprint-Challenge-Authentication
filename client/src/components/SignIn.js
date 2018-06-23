@@ -50,6 +50,8 @@ class SignIn extends Component {
                         onChange={this.handleInput}
                     />
                     <button onClick={this.submitForm}>Continue</button>
+                    <p>Do not have an account?</p>
+                    <Link to='/register'>Sign Up Here!</Link>
                 </div>
             </div>
         );
