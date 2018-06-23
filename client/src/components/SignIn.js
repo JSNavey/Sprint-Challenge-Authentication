@@ -29,29 +29,31 @@ class SignIn extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <h2>Get Your Funny On!</h2>
+                <div className='header'>
+                    <h1>Get Your Funny On!</h1>
                 </div>
-                <div>
-                    <label htmlFor='username'/>
-                    <input 
-                        type='text'
-                        name='username'
-                        placeholder='Username'
-                        value={this.state.username}
-                        onChange={this.handleInput}
-                    />
-                    <label htmlFor='password'/>
-                    <input
-                        type='password'
-                        name='password'
-                        placeholder='Password'
-                        value={this.state.password}
-                        onChange={this.handleInput}
-                    />
-                    <button onClick={this.submitForm}>Continue</button>
-                    <p>Do not have an account?</p>
-                    <Link to='/register'>Sign Up Here!</Link>
+                <div className='container'>
+                    <div className='form'>
+                        <label htmlFor='username'/>
+                        <input className='input-box'
+                            type='text'
+                            name='username'
+                            placeholder='Username'
+                            value={this.state.username}
+                            onChange={this.handleInput}
+                        />
+                        <label htmlFor='password'/>
+                        <input className='input-box'
+                            type='password'
+                            name='password'
+                            placeholder='Password'
+                            value={this.state.password}
+                            onChange={this.handleInput}
+                        />
+                        <button className='btn' onClick={this.submitForm}>Continue</button>
+                    </div>
+                    <p>Do you have an account?</p>
+                    <Link to='/register'>Sign Up Here!</Link>     
                 </div>
             </div>
         );

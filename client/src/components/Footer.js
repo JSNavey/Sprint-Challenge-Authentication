@@ -7,7 +7,7 @@ class Footer extends Component {
                 <p>ABOUT US</p>
                 <p>OUR STORIES</p>
                 <p>JOBS</p>
-                <p>MEDIA</p>
+                <p>CONTACT US</p>
                 <p>TERM AND PRIVACY</p>
             </div>
         );

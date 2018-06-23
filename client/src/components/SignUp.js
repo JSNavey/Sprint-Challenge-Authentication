@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class SignUp extends Component {
@@ -29,27 +29,30 @@ class SignUp extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <h2>Welcome!</h2>
+                <div className='header'>
+                    <h1>Welcome!</h1>
                 </div>
-                <div>
-                    <label htmlFor='username'/>
-                    <input 
-                        type='text'
-                        name='username'
-                        placeholder='Username'
-                        value={this.state.username}
-                        onChange={this.inputChange}
-                    />
-                    <label htmlFor='password'/>
-                    <input
-                        type='password'
-                        name='password'
-                        placeholder='Password'
-                        value={this.state.password}
-                        onChange={this.inputChange}
-                    />
-                    <button onClick={this.addNewUser}>Continue</button>
+                <div className='container'>
+                    <div className='form'>
+                        <label htmlFor='username'/>
+                        <input className='input-box'
+                            type='text'
+                            name='username'
+                            placeholder='Username'
+                            value={this.state.username}
+                            onChange={this.inputChange}
+                        />
+                        <label htmlFor='password'/>
+                        <input className='input-box'
+                            type='password'
+                            name='password'
+                            placeholder='Password'
+                            value={this.state.password}
+                            onChange={this.inputChange}
+                        />
+                        <button className='btn' onClick={this.addNewUser}>Continue</button>
+                    </div>
+                    <Link to ='/' className='home-btn'>Home</Link>
                 </div>
             </div>
         );

@@ -36,9 +36,9 @@ class Jokes extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <h2 className='jokes-header'>When Dad Says...</h2>
+                <div className='jokes-header'>
                     <Link to='/' className='sign-out' onClick={this.signout}>Sign Out</Link>
+                    <h2>When Dad Says...</h2>                    
                 </div>
                 <div>
                     {this.state.jokes.map((joke, index) => {
@@ -46,6 +46,7 @@ class Jokes extends Component {
                             <div key={joke.id + '' + index}>
                                 <p>{joke.setup}</p>
                                 <p>{joke.punchline}</p>
+                                <hr />
                             </div>
                         )
                     })}
